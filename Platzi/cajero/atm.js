@@ -25,7 +25,7 @@ let recipt = document.getElementById("recipt");
 let bucks = document.getElementById("bucks"); //apunta a la etiqueta <p> del html donde se dibujaran los billetes
 
 function getMoney(){
-    let amount = document.getElementById("amount")
+    let amount = document.getElementById("amount");
     money = parseInt(amount.value);
     for(let dollar of box){
         if(money > 0){
