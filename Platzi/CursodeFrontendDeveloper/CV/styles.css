@@ -1,0 +1,27 @@
+section {
+    width: 100%;
+    display: flex;
+   justify-content: center;
+}
+
+.card {
+    width: 500px;
+    height: 650px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgb(127, 133, 139);
+}
+
+.cardImg {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 4;
+}
+
+.cardImg img:nth-child(2) {
+    flex-direction: column;
+    width: 40%;
+    position: relative;
+    z-index: 5;
+}
