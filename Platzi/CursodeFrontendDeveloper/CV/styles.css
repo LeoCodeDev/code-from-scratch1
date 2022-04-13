@@ -1,27 +1,111 @@
-section {
-    width: 100%;
-    display: flex;
-   justify-content: center;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
-
+:root{
+    --white: #fff;
+    --black: #000;
+    --bkgnd: #005c7c;
+    --content: #0296b8;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+section{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bkgnd);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .card {
-    width: 500px;
-    height: 650px;
-    border-radius: 20px;
+    background: var(--content);
+    width: 50%;
+    height: 100vh;
+    place-items: center;
     overflow: hidden;
-    background: rgb(127, 133, 139);
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
 }
-
-.cardImg {
+.cardImg{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    z-index: 4;
-}
-
-.cardImg img:nth-child(2) {
-    flex-direction: column;
-    width: 40%;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    z-index: 5;
+    height: 40%;
+}
+.fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-self: center;
+}
+.leopoldo{
+    width: 25%;
+    position: absolute;
+    padding-top: 10%;
+}
+.cardImg-rrss {
+    display: grid;
+    grid-template: 1fr / repeat(2,1fr);
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    color: var(--black);
+    justify-content: space-around;
+    place-items: center;
+
+}
+.cardImg-rrss p {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 25px;
+}
+.cardImg-rrss p a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: var(--lg);
+    font-weight: 700;
+    margin: 0;
+    padding: 0px 5px;
+}
+.instagram-icon,
+.twitter-icon{
+    width: 40px;
+}
+.cardText {
+    display: grid;
+    grid-template: "a a" 50px
+                   "b c" 1fr
+                   "b c" 1fr /
+                   1fr 1fr;
+
+}
+.cardText > h1 {
+    display: flex;
+    grid-area: a ;
+    justify-content: center;
+}
+.cardText h3, .cardText p {
+    display: flex;
+    grid-area: a ;
+    margin-left: 40px;
+    justify-content: ;
+}
+.cardText .cardText-personal-info p span {
+    margin-right: 5px;
+    font-weight: bold;
+}
+.cardText-personal-info {
+    border-right: 1px solid;
+}
+@media(max-width: 500px){
+
 }
