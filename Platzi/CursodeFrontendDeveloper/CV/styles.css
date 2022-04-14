@@ -32,49 +32,44 @@ section{
     border-radius: 20px 20px 0px 0px;
 }
 .cardImg{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr) 100px;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    height: 40%;
 }
 .fondo {
     width: 100%;
     height: 100%;
+    grid-area: 1/1 / 4/4;
     object-fit: cover;
     align-self: center;
 }
 .leopoldo{
-    width: 25%;
-    position: absolute;
-    padding-top: 10%;
-}
-.cardImg-rrss {
-    display: grid;
-    grid-template: 1fr / repeat(2,1fr);
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    bottom: 0;
-    color: var(--black);
-    justify-content: space-around;
-    place-items: center;
-
-}
-.cardImg-rrss p {
     display: flex;
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 25px;
+    grid-area: 2 / 2 / 3 / 3 ;
+    width: 60%;
+    justify-self: center;
+    transform: rotate(43deg);
 }
-.cardImg-rrss p a{
+.instagram, .twitter {
+    margin: 0;
+    display: flex;
+    color: var(--black);
+    grid-area: 4/1 / 3/2 ;
+    background-color: var(--white);
+    align-items: center;
+    justify-self: center;
+    border-radius: 24px;
+    font-size: var(--md);
+    font-weight: 700;
+}
+.twitter {
+    grid-area: 4/3 / 3/4 ;
+}
+.instagram a, .twitter a{
     text-decoration: none;
     color: var(--black);
-    font-size: var(--lg);
-    font-weight: 700;
-    margin: 0;
-    padding: 0px 5px;
 }
 .instagram-icon,
 .twitter-icon{
@@ -97,7 +92,6 @@ section{
     display: flex;
     grid-area: a ;
     margin-left: 40px;
-    justify-content: ;
 }
 .cardText .cardText-personal-info p span {
     margin-right: 5px;
